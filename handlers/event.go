@@ -26,10 +26,11 @@ func (h *EventHandler) GetMany(ctx *fiber.Ctx) error {
 	}
 
 	return ctx.Status(fiber.StatusOK).JSON(&fiber.Map{
-		"status":  "sucesso",
+		"status":  "success",
 		"message": "",
 		"data":    events,
 	})
+
 }
 
 func (h *EventHandler) GetOne(ctx *fiber.Ctx) error {

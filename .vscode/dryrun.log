@@ -1,6 +1,6 @@
 make.exe --dry-run --always-make --keep-going --print-directory
 make: Entering directory 'd:/samuel/backend'
+go build -o ./bin ./cmd/api/main.go
+./bin/main
 make: Leaving directory 'd:/samuel/backend'
  
-Makefile:2: *** missing separator.  Stop.
-

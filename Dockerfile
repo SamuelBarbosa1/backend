@@ -1,8 +1,10 @@
-FROM golang:1.22.2-alpine3.20
+FROM golang:1.23-alpine
 
-WORKDIR /src/app       
+WORKDIR /src/app
 
-RUN go install github.com/cosmtrek/air@latest 
+RUN go version
+
+RUN go install github.com/air-verse/air@latest
 
 COPY . .
 

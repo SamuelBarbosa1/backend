@@ -1,5 +1,5 @@
 make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
-Makefile:2: *** missing separator.  Stop.
+make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.4.1
 # Built for Windows32
@@ -8,7 +8,7 @@ Makefile:2: *** missing separator.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Sep 05 14:37:29 2024
+# Make data base, printed on Fri Sep 06 15:22:30 2024
 
 # Variables
 
@@ -55,7 +55,7 @@ GOPATH = C:\Users\samue_hxyk2ex\go
 # environment
 VSCEXT_EXHORT_SYFT_CONFIG_PATH = 
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8360_PVYWPKQMZBVIXUVY
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18988_LUFZQVDWGPGRGJSP
 # environment
 VSCEXT_EXHORT_PIP_PATH = pip
 # environment
@@ -71,7 +71,7 @@ VSCEXT_EXHORT_MVN_PATH = mvn
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\samue_hxyk2ex\AppData\Roaming\Code\CachedData\fee1edb8d6d72a0ddff41e5f71a671c23ed924b9
+VSCODE_CODE_CACHE_PATH = C:\Users\samue_hxyk2ex\AppData\Roaming\Code\CachedData\4849ca9bdf9666755eb463db297b69e5385090e3
 # environment
 LANG = C
 # default
@@ -117,13 +117,11 @@ VSCEXT_EXHORT_PODMAN_PATH = podman
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 8360
+VSCODE_PID = 18988
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
 VSCEXT_EXHORT_PIP3_PATH = pip3
-# environment
-EFC_7716 = 1
 # automatic
 *F = $(notdir $*)
 # environment
@@ -179,6 +177,8 @@ VSCEXT_TELEMETRY_ID = 2305a23f-b86e-4fa4-9824-b55ad0766902
 # environment
 USERNAME = samue_hxyk2ex
 # environment
+EFC_9800 = 1
+# environment
 VSCEXT_EXHORT_DOCKER_PATH = docker
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
@@ -198,10 +198,14 @@ VSCEXT_EXHORT_NPM_PATH = npm
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 USERDOMAIN = MONSTER
+# 'override' directive
+GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
 # environment
 GOTELEMETRY_GOPLS_CLIENT_TOKEN = 448
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
 # environment
 VSCEXT_EXHORT_SKOPEO_CONFIG_PATH = 
 # environment
@@ -245,8 +249,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\SAMUE_~1\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\7ed1f9e1-1.92.2 
--main-sock
+VSCODE_IPC_HOOK = \\.\pipe\7ed1f9e1-1.93.0-main-sock
 # environment
 VSCEXT_USE_GO_MVS = false
 # environment
@@ -270,7 +273,7 @@ PROCESSOR_REVISION = 7100
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
 # variable set hash-table stats:
-# Load=128/1024=12%, Rehash=0, Collisions=10/140=7%
+# Load=130/1024=13%, Rehash=0, Collisions=13/158=8%
 
 # Pattern-specific Variable Values
 
@@ -278,9 +281,9 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
 
 # Directories
 
-# . (key d:/samuel/backend, mtime 1725478509): 12 files, no impossibilities.
+# . (key d:/samuel/backend, mtime 1725559874): 17 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -288,16 +291,20 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
 
 # Files
 
-start:
+start: build
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 2):
+	@./bin/main
 
 # Not a target:
 Makefile:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-05 14:40:51
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -308,24 +315,31 @@ Makefile:
 # Not a target:
 all:
 #  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+build:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
+	@go build -o ./bin ./cmd/api/main.go
 
 # files hash-table stats:
-# Load=5/1024=0%, Rehash=0, Collisions=0/6=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/19=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 107 B / avg = 6 B
-# current buf: size = 8174 B / used = 107 B / count = 16 / avg = 6 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 164 B / avg = 7 B
+# current buf: size = 8174 B / used = 164 B / count = 22 / avg = 7 B
 
-# strcache performance: lookups = 21 / hit rate = 23%
+# strcache performance: lookups = 29 / hit rate = 24%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=0/21=0%
-# Finished Make data base on Thu Sep 05 14:37:29 2024
+# Load=22/8192=0%, Rehash=0, Collisions=0/29=0%
+# Finished Make data base on Fri Sep 06 15:22:30 2024
 
  
